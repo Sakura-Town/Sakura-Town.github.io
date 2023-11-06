@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #FFF7AE, #FEABF9);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #logo-container {
+            cursor: pointer;
+        }
+
+        #logo {
+            width: 400px;
+            height: 400px;
+            background-image: url('cherry_sapling.png'); /* 使用你的透明背景的Logo图像文件名 */
+            background-size: cover;
+            background-position: center;
+            transition: mix-blend-mode 0.3s;
+        }
+
+        #logo-container:hover #logo {
+            mix-blend-mode: multiply;
+        }
+    </style>
+</head>
+<body>
+    <div id="logo-container">
+        <div id="logo"></div>
+    </div>
+</body>
+</html>
