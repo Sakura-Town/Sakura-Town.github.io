@@ -1,187 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sakura Town</title>
-    <link rel="icon" type="image/png" href="media/favicon.png">
-    <link rel="stylesheet" href="style.css">
-    <link href="rj/bunny.css" rel="stylesheet">
-    <link rel="stylesheet" href="rj/cffas.min.css">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakura Town</title>
+  <link rel="icon" type="image/png" href="media/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="rj/bunny.css" rel="stylesheet">
+  <link rel="stylesheet" href="rj/cffas.min.css">
 </head>
+
 <body>
   <script src="rj/jq.min.js"></script>
-    <nav class="desktop_navbar">
-      <a href="#"><img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
-      <a href="#discord" class="desktop_navbar_link scroll">与我们交流</a>
-      <a href="#about" class="desktop_navbar_link scroll">关于我们</a>
-      <div class="desktop_navbar_link2_div">
-          <a href="#join" class="desktop_navbar_link2 scroll">加入我们</a>
-      </div>
-    </nav>
-    <div class="mobile_navbar">
-      <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
-      <div id="mobile_navbar_links">
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">与我们交流</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">关于我们</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">加入我们</a>
-        </div>
-        <div class="icon" onclick="mobile_navbar_link_hider()">
-            <i class="fa fa-bars"></i>
-        </div>
-        <script>
-            function mobile_navbar_link_hider() {
-            var x = document.getElementById("mobile_navbar_links");
-            if (x.style.display === "flex") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "flex";
-            }
-            } 
-        </script>
+  <nav class="desktop_navbar">
+    <a href="#"><img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
+    <a href="#discord" class="desktop_navbar_link scroll">与我们交流</a>
+    <a href="#about" class="desktop_navbar_link scroll">关于我们</a>
+    <div class="desktop_navbar_link2_div">
+      <a href="#join" class="desktop_navbar_link2 scroll">加入我们</a>
     </div>
-    <div class="mainflex">
-      <div class="main1">
-        <a class="main1_logo_a" href="#">
-          <img class="main1_logo" src="media/logo.png" alt="logo">
-        </a>
-        <div class="main1_description">
-          <a>一个 Minecraft 生电服<br></a>
-          <a class="main1_actcent">由 GS Studio 打造！</a>
-        </div>
-        <a href="#more" class="scroll">
-          <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
-        </a>
-        <script>
-          const scrollLinks = document.querySelectorAll('.scroll');
-          scrollLinks.forEach(function(link) {
-            link.addEventListener('click', function(event) {
-              event.preventDefault();
-              const target = document.querySelector(link.getAttribute('href'));
-              const offsetTop = target.offsetTop;
-              window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-              });
+  </nav>
+  <div class="mobile_navbar">
+    <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="media/logo_small.png"
+        alt="logo"></a>
+    <div id="mobile_navbar_links">
+      <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">与我们交流</a>
+      <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">关于我们</a>
+      <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">加入我们</a>
+    </div>
+    <div class="icon" onclick="mobile_navbar_link_hider()">
+      <i class="fa fa-bars"></i>
+    </div>
+    <script>
+      function mobile_navbar_link_hider() {
+        var x = document.getElementById("mobile_navbar_links");
+        if (x.style.display === "flex") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "flex";
+        }
+      } 
+    </script>
+  </div>
+  <div class="mainflex">
+    <div class="main1">
+      <a class="main1_logo_a" href="#">
+        <img class="main1_logo" src="media/logo.png" alt="logo">
+      </a>
+      <div class="main1_description">
+        <a>一个 Minecraft 生电服<br></a>
+        <a class="main1_actcent">由 GS Studio 打造！</a>
+      </div>
+      <a href="#more" class="scroll">
+        <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
+      </a>
+      <script>
+        const scrollLinks = document.querySelectorAll('.scroll');
+        scrollLinks.forEach(function (link) {
+          link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const target = document.querySelector(link.getAttribute('href'));
+            const offsetTop = target.offsetTop;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
             });
           });
-        </script>
+        });
+      </script>
+    </div>
+    <div id="more"></div>
+    <div class="main2">
+      <a class="headline">我们有的：</a>
+      <div class="main2_features_div">
+        <div class="main2_feature">
+          <img class="main2_feature_img" alt="Feature Image" src="media/bg.png">
+          <a class="main2_feature_headline">友好的玩家</a>
+          <a class="main2_feature_text">我们的玩家大部分非常友好</a>
+        </div>
+        <div class="main2_feature">
+          <img class="main2_feature_img" alt="Feature Image" src="media/bg.png">
+          <a class="main2_feature_headline">完善的基础</a>
+          <a class="main2_feature_text">基础设备大部分已建成</a>
+        </div>
+        <div class="main2_feature">
+          <img class="main2_feature_img" alt="Feature Image" src="media/bg.png">
+          <a class="main2_feature_headline">不错的性能</a>
+          <a class="main2_feature_text">足够支撑大部分生电设备</a>
+        </div>
+        <br>
+        <div class="main2_feature">
+          <iframe src="//player.bilibili.com/player.html?aid=619155792&bvid=BV1b84y1S7vo&cid=1286746639&p=1"
+            scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+          <a class="main2_feature_headline">介绍视频</a>
+          <a class="main2_feature_text">观看视频以了解该服务器</a>
+        </div>
+
       </div>
-      <div id="more"></div>
-      <div class="main2">
-        <a class="headline">我们有的：</a>
-        <div class="main2_features_div">
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/bg.png">
-            <a class="main2_feature_headline">友好的玩家</a>
-            <a class="main2_feature_text">我们的玩家大部分非常友好</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/bg.png">
-            <a class="main2_feature_headline">完善的基础</a>
-            <a class="main2_feature_text">基础设备大部分已建成</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/bg.png">
-            <a class="main2_feature_headline">不错的性能</a>
-            <a class="main2_feature_text">足够支撑大部分生电设备</a>
-          </div>
-          <br>
-          <div class="main2_feature">
-            <iframe src="//player.bilibili.com/player.html?aid=619155792&bvid=BV1b84y1S7vo&cid=1286746639&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-            <a class="main2_feature_headline">介绍视频</a>
-            <a class="main2_feature_text">观看视频以了解该服务器</a>
-          </div>
-          
+    </div>
+    <div id="discord"></div>
+    <div class="main4">
+      <a class="headline">我们的官方账号</a>
+      <div class="main4_dc_div">
+
+        <div class="main4_dc_description_div">
+          <a class="main4_dc_description_title">BiliBili</a>
+          <a class="main4_dc_description">了解服务器最新资讯</a>
+          <a href="https://space.bilibili.com/3537115302333063" target="_blank" class="main4_dc_button_a">
+            <div class="main4_dc_button">主页</div>
+          </a>
         </div>
       </div>
-      <div id="discord"></div>
-      <div class="main4">
-        <a class="headline">我们的官方账号</a>
-        <div class="main4_dc_div">
-          
-          <div class="main4_dc_description_div">
-            <a class="main4_dc_description_title">BiliBili</a>
-            <a class="main4_dc_description">了解服务器最新资讯</a>
-            <a href="https://space.bilibili.com/3537115302333063" target="_blank" class="main4_dc_button_a">
-              <div class="main4_dc_button">主页</div>
-            </a>
+    </div>
+    <div id="about"></div>
+    <div class="main5">
+      <a class="headline">主要成员</a>
+      <div class="main5_admin_div">
+        <div class="main5_admins_div main5_admins_dev_type2">
+          <img class="main5_admins_img" alt="admin member img" src="media/gdplogo.png">
+          <div class="main5_admins_description_div">
+            <a class="main5_admins_description_rank main5_admins_description_rank_owner">服务器隶属工作室</a>
+            <a class="main5_admins_description_title" href="https://www.gudupao.top" target="_blank">Gudupao Spark
+              Studio</a>
+            <a class="main5_admins_description">服务器属于GS Studio</a>
           </div>
         </div>
-      </div>
-      <div id="about"></div>
-      <div class="main5">
-        <a class="headline">主要成员</a>
-        <div class="main5_admin_div">
-          <div class="main5_admins_div main5_admins_dev_type2">
-            <img class="main5_admins_img" alt="admin member img" src="media/gdplogo.png">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_owner">服务器隶属工作室</a>
-              <a class="main5_admins_description_title" href="https://www.gudupao.top" target="_blank">Gudupao Spark Studio</a>
-              <a class="main5_admins_description">服务器属于GS Studio</a>
-            </div>
-          </div>
-          <div class="main5_admins_div main5_admins_dev_type2">
-            <img class="main5_admins_img" alt="admin member img" src="media/yz.png">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_owner">服主</a>
-              <a class="main5_admins_description_title" href="https://space.bilibili.com/1377882998" target="_blank">柚子柚子</a>
-              <a class="main5_admins_description">新任服主</a>
-            </div>
-          </div>
-          <div class="main5_admins_div main5_admins_dev_type1">
-            <img class="main5_admins_img" alt="admin member img" src="media/ys.png">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_admin">物理服主</a>
-              <a class="main5_admins_description_title" href="https://space.bilibili.com/642078584" target="_blank">Demo羊石</a>
-              <a class="main5_admins_description">曾经的服主，目前提供服务器主机</a>
-            </div>
+        <div class="main5_admins_div main5_admins_dev_type2">
+          <img class="main5_admins_img" alt="admin member img" src="media/yz.png">
+          <div class="main5_admins_description_div">
+            <a class="main5_admins_description_rank main5_admins_description_rank_owner">服主</a>
+            <a class="main5_admins_description_title" href="https://space.bilibili.com/1377882998"
+              target="_blank">柚子柚子</a>
+            <a class="main5_admins_description">新任服主</a>
           </div>
         </div>
-        <div class="main5_supporter_div">
-          <div class="main5_supporters_div">
-            <img class="main5_supporters_img" alt="supporters member img" src="media/dg.png">
-            <div class="main5_supporters_description_div">
-              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">GS 创始人</a>
-              <a class="main5_supporters_description_title" href="https://space.bilibili.com/1486590453" target="_blank">冬瓜Ancient_cc</a>
-              <a class="main5_supporters_description">GS Studio 的创始人！</a>
-            </div>
-          </div>
-          <div class="main5_supporters_div">
-            <img class="main5_supporters_img" alt="supporters member img" src="media/dbg.jpg">
-            <div class="main5_supporters_description_div">
-              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">技术支持</a>
-              <a class="main5_supporters_description_title" href="https://space.bilibili.com/502594227" target="_blank">Debug967</a>
-              <a class="main5_supporters_description">提供官网与服务器专用整合包</a>
-            </div>
+        <div class="main5_admins_div main5_admins_dev_type1">
+          <img class="main5_admins_img" alt="admin member img" src="media/ys.png">
+          <div class="main5_admins_description_div">
+            <a class="main5_admins_description_rank main5_admins_description_rank_admin">物理服主</a>
+            <a class="main5_admins_description_title" href="https://space.bilibili.com/642078584"
+              target="_blank">Demo羊石</a>
+            <a class="main5_admins_description">曾经的服主，目前提供服务器主机</a>
           </div>
         </div>
       </div>
-      <div id="join"></div>
-      <div class="main3">
-        <a class="headline">加入我们</a>
-        <div class="main3_join_content_div">
-          <div class="main3_join_categories">
-            <a>限制</a>
-          </div>
-          <div class="main3_join_values">
-            <a>JE 国际正版</a>
+      <div class="main5_supporter_div">
+        <div class="main5_supporters_div">
+          <img class="main5_supporters_img" alt="supporters member img" src="media/dg.png">
+          <div class="main5_supporters_description_div">
+            <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">GS 创始人</a>
+            <a class="main5_supporters_description_title" href="https://space.bilibili.com/1486590453"
+              target="_blank">冬瓜Ancient_cc</a>
+            <a class="main5_supporters_description">GS Studio 的创始人！</a>
           </div>
         </div>
-        <div class="main3_join_div_div">
-          <div class="main3_join_div">
-            <a class="main3_join_title">QQ 群审核</a>
-            <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=iUhfCFhrk4wFpoFA7GypuDUpK2ufsVsg&authKey=7HOHgSqI1ObnWq03SZNueRIgT2T%2BxUtkvwxoMJEZFKAXm7C3shJYSProiHcBrD8Z&noverify=0&group_code=314643995" target="_blank" class="main4_dc_button_a">
-              <div class="main4_dc_button">群号：314643995</div>
-            </a>
+        <div class="main5_supporters_div">
+          <img class="main5_supporters_img" alt="supporters member img" src="media/dbg.jpg">
+          <div class="main5_supporters_description_div">
+            <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">技术支持</a>
+            <a class="main5_supporters_description_title" href="https://space.bilibili.com/502594227"
+              target="_blank">Debug967</a>
+            <a class="main5_supporters_description">提供官网与服务器专用整合包</a>
           </div>
+        </div>
+      </div>
+    </div>
+    <div id="join"></div>
+    <div class="main3">
+      <a class="headline">加入我们</a>
+      <div class="main3_join_content_div">
+        <div class="main3_join_categories">
+          <a>限制</a>
+        </div>
+        <div class="main3_join_values">
+          <a>JE 国际正版</a>
+        </div>
+      </div>
+      <div class="main3_join_div_div">
+        <div class="main3_join_div">
+          <a class="main3_join_title">QQ 群审核</a>
+          <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=iUhfCFhrk4wFpoFA7GypuDUpK2ufsVsg&authKey=7HOHgSqI1ObnWq03SZNueRIgT2T%2BxUtkvwxoMJEZFKAXm7C3shJYSProiHcBrD8Z&noverify=0&group_code=314643995"
+            target="_blank" class="main4_dc_button_a">
+            <div class="main4_dc_button">群号：314643995</div>
+          </a>
         </div>
       </div>
     </div>
   </div>
-    <footer class="copyright_div">
-      <a href="https://github.com/Sakura-Town" class="copyright" target="_blank">Sakura Town</a>
-    </footer>
-  </body>
+  </div>
+  <footer class="copyright_div">
+    <a href="https://github.com/Sakura-Town" class="copyright" target="_blank">Sakura Town</a>
+  </footer>
+</body>
+
 </html>
